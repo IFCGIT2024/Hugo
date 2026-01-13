@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Arrest Helper</title>
+  <title>Arrest Helper by Hugo Waffles</title>
   <style>
     :root {
       --bg: #0f172a;
@@ -175,6 +175,7 @@
 
       <div class="flex" style="margin-top:12px;">
         <button class="secondary" id="copyBtn">Copy summary</button>
+        <button class="secondary" id="copyCodesBtn">Copy codes</button>
         <button class="secondary" id="clearBtn">Clear list</button>
         <button class="secondary" id="loadSheetsBtn">Reload PC/TC files</button>
         <span class="pill" id="dataStatus"><strong>Status:</strong> Loading local PC/TC sheets...</span>
@@ -348,6 +349,19 @@
       navigator.clipboard.writeText(text).catch(() => {});
     }
 
+    function copyCodes() {
+      if (!selections.length) return;
+      const codes = selections.map(item => `${item.type} ${item.code}`);
+      const text = codes.join(", ");
+      navigator.clipboard.writeText(text).then(() => {
+        setStatus("Copied codes to clipboard");
+        setTimeout(() => setStatus(""), 2000);
+      }).catch(() => {
+        // fallback: prompt so user can copy manually
+        window.prompt("Copy the codes below:", text);
+      });
+    }
+
     function parseMoney(text) {
       const digits = (text || "").replace(/[^\d]/g, "");
       return digits ? Number(digits) : 0;
@@ -465,6 +479,7 @@
     document.getElementById("addPcBtn").addEventListener("click", () => addCharge("PC"));
     document.getElementById("addTcBtn").addEventListener("click", () => addCharge("TC"));
     document.getElementById("copyBtn").addEventListener("click", copySummary);
+    document.getElementById("copyCodesBtn").addEventListener("click", copyCodes);
     document.getElementById("clearBtn").addEventListener("click", () => {
       selections = [];
       renderTable();
@@ -513,5 +528,4 @@
   </script>
 </body>
 </html>
-
 
