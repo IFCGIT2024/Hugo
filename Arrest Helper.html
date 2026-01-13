@@ -384,13 +384,20 @@
       const rows = Array.from(doc.querySelectorAll("table.waffle tr"));
       const list = [];
       rows.forEach(tr => {
-        const cells = tr.querySelectorAll("td");
-        if (cells.length < 3) return;
-        const code = (cells[0]?.textContent || "").trim();
-        if (!code.startsWith(prefix)) return;
-        const name = (cells[2]?.textContent || "").trim();
-        const fine = parseMoney(cells[3]?.textContent || "");
-        const stars = countStars(cells[4]?.textContent || "");
+        const tds = Array.from(tr.querySelectorAll("td"));
+        if (!tds.length) return;
+        const texts = tds.map(td => (td.textContent || "").trim());
+        const codeIdx = texts.findIndex(t => t.startsWith(prefix));
+        if (codeIdx === -1) return;
+        const code = texts[codeIdx];
+        let name = (texts[codeIdx + 1] || "").trim();
+        if (!name) {
+          name = texts.find((t, i) => i !== codeIdx && t) || "";
+        }
+        const fineText = texts[codeIdx + 2] || texts.find((t, i) => i !== codeIdx && /\$|\d/.test(t)) || "";
+        const starsText = texts[codeIdx + 3] || texts.find((t, i) => i !== codeIdx && /[\*\u2605\u2606\u2B50]|\d/.test(t)) || "";
+        const fine = parseMoney(fineText);
+        const stars = countStars(starsText);
         if (!code || !name) return;
         list.push({ code, name, fine, stars });
       });
@@ -529,7 +536,6 @@
   </script>
 </body>
 </html>
-
 
 
 
