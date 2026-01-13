@@ -352,7 +352,7 @@
 
     function copyCodes() {
       if (!selections.length) return;
-      const codes = selections.map(item => `${item.type} ${item.code}`);
+      const codes = selections.map(item => `${item.code}`);
       const text = codes.join(", ");
       navigator.clipboard.writeText(text).then(() => {
         setStatus("Copied codes to clipboard");
@@ -529,4 +529,5 @@
   </script>
 </body>
 </html>
+
 
