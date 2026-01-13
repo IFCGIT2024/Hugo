@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -322,7 +322,8 @@
       });
 
       totalFineEl.textContent = fineSum;
-      totalStarsEl.textContent = starsSum;
+      const displayedStars = Math.min(5, starsSum);
+      totalStarsEl.textContent = displayedStars;
       totalCountEl.textContent = countSum;
     }
 
