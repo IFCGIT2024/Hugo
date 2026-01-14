@@ -1,8 +1,8 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Arrest Helper</title>
+  <title>Arrest Helper by Hugo Waffles</title>
   <style>
     :root {
       --bg: #0f172a;
@@ -123,7 +123,15 @@
   </style>
 </head>
 <body>
-  <h1>Arrest Helper</h1>
+  <div class="card" style="margin-bottom:12px;">
+    <strong>Miranda Rights</strong>
+    <p>You have the right to remain silent,</p>
+    <p>Anything you say can and will be used against you in the court of law.</p>
+    <p>You have the right to an attorney,</p>
+    <p>If you cannot afford an attorney, one will be appointed to you by the state if available.</p>
+    <p>Do you understand the rights I just read to you?</p>
+  </div>
+  <h1>Arrest Helper by Hugo Waffles</h1>
   <p>Pick charges fast, auto-sum fines/stars, and work through the RP checklist.</p>
 
   <div class="grid">
@@ -175,8 +183,9 @@
 
       <div class="flex" style="margin-top:12px;">
         <button class="secondary" id="copyBtn">Copy summary</button>
+        <button class="secondary" id="copyCodesBtn">Copy codes</button>
         <button class="secondary" id="clearBtn">Clear list</button>
-        <button class="secondary" id="loadSheetsBtn">Reload PC/TC files</button>
+        <button class="secondary" id="loadSheetsBtn">Reload PC/TC files FOR OFFLINE USE ONLY DONT TOUCH </button>
         <span class="pill" id="dataStatus"><strong>Status:</strong> Loading local PC/TC sheets...</span>
       </div>
       <input type="file" id="sheetPicker" accept=".html,text/html" multiple style="display:none">
@@ -185,7 +194,7 @@
     <div class="card">
       <div class="flex" style="justify-content: space-between; margin-bottom: 10px;">
         <h3 style="margin:0;">RP Guide</h3>
-        <span class="muted">Progress saves locally</span>
+       <!-- <span class="muted">Progress saves locally</span> -->
       </div>
       <div id="checklist"></div>
       <label for="notes" style="margin-top:10px;">Notes</label>
@@ -198,14 +207,14 @@
 
       <script>
     const checklistItems = [
-      "/me takes out bodycam, turns it on (check red light) | /do bodycam recording, ballistic and waterproof",
-      "/me applies cuffs and notes cuff time | /do bodycam timestamped",
-      "/me pats suspect down for ID + illegal items; log confiscations",
-      "Read charges then Miranda rights; confirm lawyer request",
-      "If lawyer requested: /me extracts SD, shows bodycam on PDA to lawyer",
-      "If Code A or uniform change: /me refreshes bodycam",
-      "Transport: /me seats suspect, warns 'watch your head', drive lawful unless exigent",
-      "DOC intake: ask jumpsuit size (/me grabs size), remove mask/ID, medical if needed",
+      "/me takes out bodycam, turns it on and checks for the red light",
+      "If Code A /me refreshes bodycam",
+      "/do The bodycam is recording, and is ballistic and waterproof",
+      "/do saves and uploads the bodycam content to LSPD servers and continues recording",
+      "/me Extracts the SD Card from the bodycam and inserts it into the PDA.",
+      "/me Displays bodycam on PDA to the lawyer ",
+      "When Breaking trunk  /me pulls out crowbar from vest and uses it to break into trunk |  /do trunk is open",
+      "DOC intake: ask jumpsuit size (/me reaches behind desk and grabs a <size> jumpsuit |  /me puts jumpsuit on bed",
       "PDA: enter each charge separately; apply fines/stars; confirm totals with suspect",
       "/do saves and uploads bodycam to LSPD servers; dispatch 10-99, 10-19"
     ];
@@ -321,7 +330,8 @@
       });
 
       totalFineEl.textContent = fineSum;
-      totalStarsEl.textContent = starsSum;
+      const displayedStars = Math.min(5, starsSum);
+      totalStarsEl.textContent = displayedStars;
       totalCountEl.textContent = countSum;
     }
 
@@ -348,6 +358,19 @@
       navigator.clipboard.writeText(text).catch(() => {});
     }
 
+    function copyCodes() {
+      if (!selections.length) return;
+      const codes = selections.map(item => `${item.code}`);
+      const text = codes.join(", ");
+      navigator.clipboard.writeText(text).then(() => {
+        setStatus("Copied codes to clipboard");
+        setTimeout(() => setStatus(""), 2000);
+      }).catch(() => {
+        // fallback: prompt so user can copy manually
+        window.prompt("Copy the codes below:", text);
+      });
+    }
+
     function parseMoney(text) {
       const digits = (text || "").replace(/[^\d]/g, "");
       return digits ? Number(digits) : 0;
@@ -369,13 +392,20 @@
       const rows = Array.from(doc.querySelectorAll("table.waffle tr"));
       const list = [];
       rows.forEach(tr => {
-        const cells = tr.querySelectorAll("td");
-        if (cells.length < 3) return;
-        const code = (cells[0]?.textContent || "").trim();
-        if (!code.startsWith(prefix)) return;
-        const name = (cells[2]?.textContent || "").trim();
-        const fine = parseMoney(cells[3]?.textContent || "");
-        const stars = countStars(cells[4]?.textContent || "");
+        const tds = Array.from(tr.querySelectorAll("td"));
+        if (!tds.length) return;
+        const texts = tds.map(td => (td.textContent || "").trim());
+        const codeIdx = texts.findIndex(t => t.startsWith(prefix));
+        if (codeIdx === -1) return;
+        const code = texts[codeIdx];
+        let name = (texts[codeIdx + 1] || "").trim();
+        if (!name) {
+          name = texts.find((t, i) => i !== codeIdx && t) || "";
+        }
+        const fineText = texts[codeIdx + 2] || texts.find((t, i) => i !== codeIdx && /\$|\d/.test(t)) || "";
+        const starsText = texts[codeIdx + 3] || texts.find((t, i) => i !== codeIdx && /[\*\u2605\u2606\u2B50]|\d/.test(t)) || "";
+        const fine = parseMoney(fineText);
+        const stars = countStars(starsText);
         if (!code || !name) return;
         list.push({ code, name, fine, stars });
       });
@@ -465,6 +495,7 @@
     document.getElementById("addPcBtn").addEventListener("click", () => addCharge("PC"));
     document.getElementById("addTcBtn").addEventListener("click", () => addCharge("TC"));
     document.getElementById("copyBtn").addEventListener("click", copySummary);
+    document.getElementById("copyCodesBtn").addEventListener("click", copyCodes);
     document.getElementById("clearBtn").addEventListener("click", () => {
       selections = [];
       renderTable();
@@ -513,4 +544,7 @@
   </script>
 </body>
 </html>
+
+
+
 
