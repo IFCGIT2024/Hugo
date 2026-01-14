@@ -1,0 +1,208 @@
+PENAL CODE,CRIME,FINE,Stars,Notes,Description
+,ARTICLE 2: CRIMES AGAINST SOCIETY,,,,
+,,,,,
+,"Drug Related offences. (When searching, cannabis shows as ""Drugs"").",,,,
+PC 2.1.1,Possession of Cocaine in small quantities,"$20,000",,Confiscation,Possession of up to 4 units of cocaine.
+PC 2.1.2,Possession of Cocaine in moderate quantities,"$30,000",,Confiscation,Possession of 5 to 8 units of cocaine.
+PC 2.1.3,Possession of Cocaine with intent to supply,"$15,000",⭐⭐,Confiscation,Possession of cocaine over 8 units.
+PC 2.1.4,Production of Cocaine,"$45,000","⭐⭐
+⭐⭐",Confiscation,The process of manufacturing cocaine using modulated equipment
+PC 2.2.1,Possession of cannabis in small quantities,"$20,000",,Confiscation,Possession of cannabis up to 10 units.
+PC 2.2.2,Possession of cannabis in moderate quantities,"$30,000",,Confiscation,Possession of over 11 units of cannabis.
+PC 2.2.3,Possession of Cannabis with Intent to supply,"$15,000",⭐⭐,Confiscation,Attempting to sell or purchase cannabis.
+PC 2.2.4,Cultivation of cannabis in small quantities,"$30,000",⭐,Confiscation,Growing up to 5 cannabis plants.
+PC 2.2.5,Cultivation of cannabis in large quantities,"$45,000",⭐⭐⭐,Confiscation,Growing more than 5 cannabis plants.
+PC 2.2.6,Production of Cannabis,"$45,000",⭐⭐⭐,Confiscation,The process of manufacturing Cannabis using modulated equipment
+PC 2.3,Usage of illicit substances in public,"$10,000",,Confiscation,Using drugs or alchohol in public.
+,Prohibited Items,,,,
+PC 2.4.1,Possession of prohibited items in small quantities,"$15,000",,Class A infraction / Confiscation,Possession of up to 3 illegal items from the illegal item list
+PC 2.4.2,Possession of prohibited items in large quantities,"$15,000",⭐⭐,Confiscation,Possession of more than 3 items from the illegal item list
+PC 2.4.3,Sale of prohibited item,"$25,000",⭐⭐⭐,Confiscation,Selling or purchasing an item from the illegal item list
+PC 2.4.4,Possession of infected technology with malicious intent,"$35,000","⭐⭐
+⭐⭐",Confiscation,Possession of a USB with a virus
+,Weapon Violations,,,,
+PC 2.5.1,Carrying a weapon without a license,"$20,000 ",,Class A Infraction / Confiscation / Revoke gun license,Carrying any weapon without a valid weapon license
+PC 2.5.2,Overcarrying,"$20,000",⭐⭐,Confiscation / Revoke gun license,Carrying more than the prescribed amount of weapons and ammo allowed in the firearm law
+PC 2.5.3,Open Carrying,"$10,000",⭐⭐,Confiscation / Revoke gun license,Open Carrying a weapon in public
+PC 2.5.4,Possession of any prohibited weapon,"$20,000 ",,Class A infraction / Confiscation,Possession of a prohibited weapon
+PC 2.5.5,Possession of multiple prohibited weapons,"$20,000",⭐⭐⭐,Confiscation / Revoke gun license,Possession of more than one prohibited weapon
+PC 2.5.6,Brandishing of a weapon,"$25,000 ",⭐⭐⭐,Confiscation / Revoke gun license,Using a weapon to intimidate or threaten a person
+PC 2.5.7,Possession of state issued articles,"$20,000",⭐⭐⭐,Confiscation,"Possession of weapons, armour or balaclavas, etc. belonging to a state organization"
+PC 2.5.8,Discharging a weapon in a public place,"$10,000",⭐,Confiscation / Revoke gun license,Shooting a weapon in a public place but not at a person
+PC 2.5.9,Distribution of weapons ammunition or state-issued articles,"$50,000","⭐⭐
+⭐⭐⭐",Confiscation / Revoke gun license,"Selling or buying weapons, ammo or state issued articles"
+PC 2.5.10,Production of ammunition,"$50,000","⭐⭐
+⭐⭐",Confiscation / Revoke gun license,The process of manufacturing ammunition using modulated equipment
+,Bodily harm or causing death,,,,
+PC 2.6.1,Non-lethal battery,"$10,000",⭐,,Inflicting bodily harm on a person wihtout using a firearm
+PC 2.6.2,Manslaughter,"$15,000",⭐⭐⭐,,Unintentionally killing another person(s).
+PC 2.6.3,Assault by Threat,"$10,000",⭐⭐,,Verbal assault where a likelihood of the threat's execution is present.
+PC 2.6.4,Attempted Murder,"$20,000","⭐⭐
+⭐⭐",No Bail,Attempting to kill a person. (Knocked unconcious and revived).
+PC 2.6.5,Murder through hostile action,"$30,000","⭐⭐
+⭐⭐⭐",No Bail,Killing a person. (Finished a person).
+PC 2.6.6,Rape and/or Sexual Assault,"$50,000","⭐⭐
+⭐⭐⭐",,Sexual intercourse against a person's will.
+,Neglect,,,,
+PC 2.7.1,Failure to Act,"$10,000",⭐,,Leaving a person to bleed out.
+PC 2.7.2,Refusal of Duty to Act,"$60,000",⭐⭐⭐,Dismissal from their position,Refusing to act in the interests of the general public by a state employee.
+PC 2.7.3,Failure to act by a Public servant,-,⭐⭐⭐,Dismissal from their position,A Public servant leaving a person to bleed out.
+PC 2.7.4,Abandonment of a civilian by a public servant,-,"⭐⭐
+⭐⭐",Dismissal from their position,Leaving a person whom you were in charge of on their own where they cannot look after themselves or are vulnerable.
+,Violations of freedom,,,,
+PC 2.8.1,Abduction,"$20,000","⭐⭐
+⭐⭐",No Bail,Taaking someone by force or deception.
+PC 2.8.2,Kidnapping,"$25,000","⭐⭐
+⭐⭐",No Bail,Taking someone and holding them captive.
+PC 2.8.3,Taking a hostage,"$30,000","⭐⭐
+⭐⭐",No Bail,Taking someone in exchange for something or someone else.
+PC 2.8.4,Human Trafficking,"$50,000","⭐⭐
+⭐⭐",No Bail,"Taking people by force, coercion or fraud to facilitate labor or commercial sex act."
+PC 2.8.5,Violation of privacy,"$20,000",⭐⭐,,"Breaching, infringing or violating the confidentialilty or right to privacy."
+PC 2.8.6,Unlawful Detention,"$20,000",⭐⭐⭐,,Detaining of a citizen by a public servant where the reason was either unclear or unwarranted. 
+,Harassment and disorderly conduct,,,,
+PC 2.9.1,Street Harassment,"$10,000",⭐⭐,,"Rude, derogaory, unwelcome comments, whistles or any other unwelcome form of sexual verbal interaction."
+PC 2.9.2,Sexual Harassment,"$150,000","⭐⭐
+⭐⭐⭐",,Harassement of the sexual kind.
+PC 2.9.3,Stalking,"$35,000","⭐⭐
+⭐⭐",No Bail,Following or harassing another person causing htem to fair injury or death.
+PC 2.9.4,Hooliganism,"$20,000",⭐⭐⭐,,Massive disturbance of the peace.
+PC 2.9.5,Rioting or inciting a riot,"$35,000",⭐⭐⭐,,Causing or encouraging the distrubance of peace by three or more people and acting with common intent.
+PC 2.9.6 ,Spreading of disease,"$10,000",,Class A Infraction,Spreading diesease intentionally.
+PC 2.9.7,Indecent Exposure,"$20,000",⭐⭐,,Showing private areas of the body where it's against decency standards.
+PC 2.9.8,Provoking,"$10,000",⭐⭐,,Causing someone to act or react in response to annoying or harassment.
+PC 2.9.9,Engaging in prostitution,"$5,000",,,Buying or selling one's sexual desires. 😈
+PC 2.9.10,Defamation of character,"$50,000",⭐⭐⭐,Can ONLY be applied by a Judge after court,Damaging a person's reputation by slander or libel
+PC 2.9.11,Harassment of a public servant,"$30,000",⭐⭐⭐,,Harassing a public servant.
+,Robbery and Fraud,,,,
+PC 2.10.1,Document forgery,"$15,000",⭐⭐⭐,Confiscation of Documents,Creating a false document to give appearance of truth.
+PC 2.10.2,Looting of an Automated Teller Machine (ATM),"$8,000",⭐,Confiscation,Robbing an ATM
+PC 2.10.3,Theft of property,"$20,000",⭐⭐⭐,,Taking someone's stuff without consent
+PC 2.10.4,Fraud,"$20,000",⭐⭐⭐,,Defrauding someone or something.
+PC 2.10.5,Grand Theft Auto,"$30,000",⭐⭐⭐,,Taking a car without permission.
+PC 2.10.6,Robbery,"$35,000","⭐⭐
+⭐⭐",No Bail,Theft but with force or threat.
+PC 2.10.7,False Advertising,"$10,000",,Class A Infraction,Publicly distributing an advert that is untrue.
+,Driving and vehicular related felonies,,,,
+PC 2.11.1,Reckless Driving,"$20,000",⭐⭐,Revoke Driving License,"Operating a motor vehicle negligently or knowingly disregarding the safety of others, traffic code or both."
+PC 2.11.2,Causing injury by dangerous driving,"$20,000",⭐⭐⭐,Revoke Driving License,Hurting someone using a car.
+PC 2.11.3,Causing death by dangerous driving,"$30,000","⭐⭐
+⭐⭐",Revoke Driving License / No Bail,Killing someone using a car.
+PC 2.11.4,Failure to yield to an emergency service vehicle,"$10,000",⭐,Revoke Driving License,Not stopping for an emergency vehicle with it's lights on.
+,Animal Cruelty (Bruno's Law),,,,
+PC 2.12.1,Animal abuse causing minor harm ,"$20,000",⭐⭐,,Hurting an animal deliberately.
+PC 2.12.2,Animal abuse causing major harm,"$30,000",⭐⭐⭐,,Significantly hurting an animal deliberately.
+PC 2.12.3,Animal abuse resulting in death,"$30,000","⭐⭐
+⭐⭐",No Bail,Killing an animal.
+,Miscellaneous and petty crimes,,,,
+PC 2.13.1,Attempted Suicide,"$20,000",⭐,Take to EMS for mental health check and can swap star for 10K Fine,Trying to kill one's self.
+PC 2.13.2,Conspiracy to commit a crime,"$20,000",⭐⭐,,Plotting or conspiring to commit a crime.
+PC 2.13.3,Vandalism,"$30,000",⭐⭐⭐,,Destroying or damaging belongings of another person.
+PC 2.13.4,Illegal Fishing,"$10,000",,Class B Infraction,Fishing in mirror park.
+PC 2.13.5 ,Breach of Contract,,⭐⭐⭐,Charge will be dropped if fine is paid instead / Class A Infraction instead,Breaking the terms of a signed contractual agreement.
+PC 2.13.6,Entrapment,"$100,000","⭐⭐
+⭐⭐",Can ONLY be applied by a Judge after court,Tricking someone into committing a crime to secure their prosecution.
+PC 2.13.7,Installation of temporary structure without a permit.,"$15,000",,Class B Infraction,Putting a barricade down without a permit.
+PC 2.13.8,"Installation of temporary structure on a roadway or path.","$15,000",⭐,,Putting a barricade down on a road or path with no permit.
+,ARTICLE 3: CRIMES AGAINST THE STATE,,,,
+,,,,,
+,Terrorism and criminal groups,,,,
+PC 3.1.1,Participation in terrorism,"$50,000","⭐⭐
+⭐⭐⭐",,Using violence and intimidation with political aims.
+PC 3.1.2,Organization of terrorism,"$75,000","⭐⭐
+⭐⭐⭐",,Organizing and recruiting people for terrorism.
+PC 3.1.3,Leading a terrorist organization,"$100,000","⭐⭐
+⭐⭐⭐",,Leading a terrorist organization.
+PC 3.1.4,Commiting a terrorist act,"$50,000","⭐⭐
+⭐⭐⭐",,Comotting a terrorist act.
+PC 3.1.5,Creation of a stable armed group,"$35,000","⭐⭐
+⭐⭐",No Bail,Creating a stable group of people with access to weapons with purpose to commit crimes. 
+PC 3.1.6,Banditry,"$25,000","⭐⭐
+⭐⭐",No Bail,Committing organized crime.
+,Justice/Power,,,,
+PC 3.2,Obstruction of Justice ,"$35,000",⭐⭐⭐,,Willfully intefering with the process of justice and law.
+PC 3.3,Attempted Seizure of Power,"$75,000","⭐⭐
+⭐⭐⭐",,Attempting to seize power.
+,Trespassing,,,,
+PC 3.4.1,Trespassing on private property,"$20,000",⭐⭐,,Entering and/or loitering unlawfully upon the land of another person.
+PC 3.4.2,Trespassing in a State Facility,"$30,000",⭐⭐⭐,,Trespassing but on a state facility behind lockable gates/doors.
+PC 3.4.3,Breaking and Entering,"$35,000","⭐⭐
+⭐⭐",,Forcing or otherwise gaining unlwful passage in another's building.
+,Comply/ID/Gambling,,,,
+PC 3.5,Failure to comply,"$35,000","⭐⭐
+⭐⭐",,Not cooperating with the lawful requests of any state employee
+PC 3.6,Failure to Identify,"$10,000",⭐⭐,,Not identifying with a state employee after a lawful request.
+PC 3.7,Illegal Gambling,"$20,000",⭐⭐,,Gambling by any means outside of the casino.
+,Impersonation,,,,
+PC 3.8.1,Impersonating a public Servant,"$35,000",⭐⭐,,Pretending to be a public servant.
+PC 3.8.2,Impersonating a law enforcement Officer,"$35,000",⭐⭐⭐,,Pretending to be a LEO.
+,Laws for elections,,,,
+PC 3.9.1,Breach of electoral silence,"$25,000",⭐⭐⭐,,Campaigning during active voting times by party members.
+PC 3.9.2,Breach of electoral silence at the voting booth,"$50,000","⭐⭐
+⭐⭐",,Campaigning near the voting booth.
+PC 3.9.3,Blocking a voting site,"$35,000","⭐⭐
+⭐⭐",,Intentionally blocking or limiting access to the voting booths.
+PC 3.9.4,Illegal persuation of votes,35000,"⭐⭐
+⭐⭐",,Trying to get people to vote for someone in exchange of something.
+,Harm to LEOs and reporting,,,,
+PC 3.10,Battery of a public servant,"$15,000",⭐⭐⭐,,Inflicting bodily injury without firearms on a state employee.
+PC 3.11,Murder or Attempted murder of a public servant,"$35,000","⭐⭐
+⭐⭐⭐",,Killing or trying to kill a public servant.
+PC 3.12,False reporting,"$20,000",⭐⭐⭐,,Alerting the authorities knowing details are incorrect.
+,Bribery/Monetary,,,,
+PC 3.13.1,Active Bribery,"$20,000",⭐⭐⭐,,Offering money or a favour to a person of trust.
+PC 3.13.2,Passive Bribery,"$50,000","⭐⭐
+⭐⭐⭐",,Taking money or a favour given or promised in order to influence the judgement or conduct of a person in a position of trust.
+PC 3.13.3,Quid Pro Quo,"$50,000","⭐⭐
+⭐⭐⭐",,A favour or advantage given in return for something
+PC 3.14,Failure to pay fines,"$20,000",⭐⭐⭐,No Bail until sum has been paid,Being at max fines and not paying them.
+,Evading Arrest,,,,
+PC 3.15.1,Evading arrest,"$20,000",⭐⭐⭐,No Bail,"A person fleeing LEO trying to arrest, detaion or investigate them."
+PC 3.15.2,Assisting the evasion of arrest,"$20,000",⭐⭐⭐,No Bail,Assisting a person evade an arrest.
+PC 3.15.3,Assisting the evasion of arrest by a public servant,"$75,000","⭐⭐
+⭐⭐⭐",No Bail,Assisting a person evade an arrest by a public servant.
+,Professional ethics,,,,
+PC 3.16.1,Street harassment towards a colleague,"$20,000",⭐⭐,Dismissal from position,Harassment toward a colleague.
+PC 3.16.2,Hostile work environment,"$50,000",⭐⭐⭐,Dismissal from position,Behaviour that makes a work environment difficult or uncomfortable.
+PC 3.16.3,Sexual harassment towards a colleague,"$50,000",⭐⭐⭐,Dismissal from position,Sexually harassing a colleague.
+,Misc,,,,
+PC 3.17,Going absent without leave,"$50,000","⭐⭐
+⭐⭐⭐",Dismisal from position,Being absent from military duties without authority.
+PC 3.18,Provoking a public servant,"$20,000",⭐⭐,,Provoking but to a public servant.
+PC 3.19," Tax Evasion",Variable,"⭐⭐
+⭐⭐","Fine is detailed in the warrant up to a maximum of $100,000",Avoiding taxes! Naughty.
+PC 3.20,Participation in a cyber attack of the state’s resources,"$25,000","⭐⭐
+⭐⭐",,Taking part in a hacker attack on the state's network.
+PC 3.21,Unfair Dismissal,Variable,"⭐⭐
+⭐⭐",The prison sentence is subject to a court verdict or settlement agreement,"The act of dismissing an employee from an organization without first 
+	 following correct protocols or without reason or sufficient evidence to 
+	 support dismissal."
+,ARTICLE 4: MALFEASANCE,,,,
+,,,,,
+PC 4.1,Disobeying an order,"$20,000",⭐⭐⭐,No Bail,Refusing or failing to follow a lawful order given by a superior.
+PC 4.2,Professional Misconduct,"$75,000","⭐⭐
+⭐⭐⭐",,"Conducting oneself in a manner that is professionally unsuitable, potentially dangerous, incompetent, distruptive, abusive or illegal."
+PC 4.3,Sabotage,"$75,000","⭐⭐
+⭐⭐⭐",,"Destroying/damaging weapons, ammo, goods, items of state property to hinder or halt operations by the state."
+PC 4.4,Espionage,"$75,000","⭐⭐
+⭐⭐⭐",,"Spying or watching a person, company, government etc."
+PC 4.5,Conduct Unbecoming,"$75,000","⭐⭐
+⭐⭐⭐",,Acting agaisnt the public interests which harms their statnding of the professionalism to the public eye.
+PC 4.6,Corruption,"$75,000","⭐⭐
+⭐⭐⭐",,Dishonest or fraudulent behaviour by a state employee.
+,ARTICLE 5: JUDICIAL AND STATUTE CRIMES,,,,
+,,,,,
+PC 5.1,Disobeying a judicial order,"$20,000","⭐⭐
+⭐⭐",No Bail,"Refusing or failing to follow a lawful order given by the Governor, AG or Judge."
+PC 5.2,Disruption of a trial,"$20,000","⭐⭐
+⭐⭐",No Bail,Distrupting court or legal processes in court.
+PC 5.3,Dishonoring a judiciary member,"$20,000","⭐⭐
+⭐⭐",No Bail,Dishonoring the position of a judicial officer during the performance and/or in relation to previous performance.
+PC 5.4,Contempt of court,"$20,000","⭐⭐
+⭐⭐",No Bail,Being disobedient in court.
+PC 5.5,Ill-use of a judiciary permit,"$20,000","⭐⭐
+⭐⭐",No Bail,Misuse of a judicial permit.
+PC 5.6,Forged Evidence,"$20,000","⭐⭐
+⭐⭐",No Bail,Tampering or forging evidence.
+PC 5.7,Perjury,"$20,000","⭐⭐
+⭐⭐",No Bail,"Swearing a false oath or falsifying an affirmation to tell the truth, whether spoken or in writing concerining official proceedings."
