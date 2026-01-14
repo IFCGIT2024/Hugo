@@ -397,24 +397,57 @@
     function parseCharges(doc, prefix) {
       const rows = Array.from(doc.querySelectorAll("table.waffle tr"));
       const list = [];
+
+      // Helper to test a cell for a code like "PC" or "TC" prefix
+      const codeRegex = new RegExp(`^\\s*${prefix}\\b`, 'i');
+
       rows.forEach(tr => {
         const tds = Array.from(tr.querySelectorAll("td"));
         if (!tds.length) return;
-        const texts = tds.map(td => (td.textContent || "").trim());
-        const codeIdx = texts.findIndex(t => t.startsWith(prefix));
-        if (codeIdx === -1) return;
-        const code = texts[codeIdx];
-        let name = (texts[codeIdx + 1] || "").trim();
-        if (!name) {
-          name = texts.find((t, i) => i !== codeIdx && t) || "";
+
+        const cells = tds.map(td => ({ el: td, text: (td.textContent || "").trim() }));
+
+        // Find the cell that contains the code (e.g. "PC 2.1.1" or "TC 3.1.4")
+        const codeCellIndex = cells.findIndex(c => codeRegex.test(c.text));
+        if (codeCellIndex === -1) return;
+
+        const rawCode = cells[codeCellIndex].text.replace(/\s+/g, ' ').trim();
+
+        // Name should be the next non-empty cell after the code
+        let name = '';
+        for (let i = codeCellIndex + 1; i < cells.length; i++) {
+          if (cells[i].text) { name = cells[i].text; break; }
         }
-        const fineText = texts[codeIdx + 2] || texts.find((t, i) => i !== codeIdx && /\$|\d/.test(t)) || "";
-        const starsText = texts[codeIdx + 3] || texts.find((t, i) => i !== codeIdx && /[\*\u2605\u2606\u2B50]|\d/.test(t)) || "";
+
+        // Fine: look for a nearby cell that contains a $ or digits or the word Variable or a dash
+        let fineText = '';
+        for (let i = codeCellIndex + 1; i < Math.min(cells.length, codeCellIndex + 5); i++) {
+          const t = cells[i].text || '';
+          if (/\$|\d|variable|\-|impound|towing|extra|OR\s+towing/i.test(t)) { fineText = t; break; }
+        }
+        // If we didn't find fine after the code, also check before the code (some sheets vary)
+        if (!fineText) {
+          for (let i = Math.max(0, codeCellIndex - 3); i < codeCellIndex; i++) {
+            const t = cells[i].text || '';
+            if (/\$|\d|variable|\-|impound|towing|extra|OR\s+towing/i.test(t)) { fineText = t; break; }
+          }
+        }
+
+        // Stars: search nearby cells for star glyphs or words
+        let starsText = '';
+        for (let i = codeCellIndex + 1; i < Math.min(cells.length, codeCellIndex + 6); i++) {
+          const t = cells[i].text || '';
+          if (/[*\u2605\u2606\u2B50|⭐]|\bstar(s)?\b|\d+\s*(?:star|stars|st)\b/i.test(t)) { starsText = t; break; }
+        }
+
         const fine = parseMoney(fineText);
         const stars = countStars(starsText);
-        if (!code || !name) return;
-        list.push({ code, name, fine, stars });
+
+        if (!rawCode || !name) return;
+
+        list.push({ code: rawCode, name, fine, fineText, stars, starsText });
       });
+
       return list;
     }
 
@@ -464,6 +497,10 @@
         cacheCharges();
         renderOptions(searchInput.value);
         setStatus("Loaded PC/TC from files in this folder.");
+        console.info('Arrest Helper: parsed PC entries=', pcCharges.length, 'TC entries=', tcCharges.length);
+        // Log a small sample for quick verification
+        console.info('PC sample:', pcCharges.slice(0,6));
+        console.info('TC sample:', tcCharges.slice(0,6));
         return true;
       } catch (e) {
         console.warn("Auto load failed", e);
