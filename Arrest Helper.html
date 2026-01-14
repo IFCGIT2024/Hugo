@@ -378,13 +378,19 @@
 
     function countStars(text) {
       if (!text) return 0;
-      const clean = (text || "").replace(/\s+/g, "");
-      const numberMatch = clean.match(/\d+/);
-      if (numberMatch) return Number(numberMatch[0]);
-      const starIcons = clean.match(/[\*\u2605\u2606\u2B50]/g);
+      const raw = String(text).trim();
+      // Prefer explicit star glyphs or '*' characters
+      const starIcons = raw.match(/[\*\u2605\u2606\u2B50]/g);
       if (starIcons) return starIcons.length;
-      const odd = clean.match(/\u0192/g);
-      if (odd) return odd.length;
+      // Look for explicit phrases like "1 star", "2 stars"
+      const wordMatch = raw.match(/(\d+)\s*(?:star|stars|st)\b/i);
+      if (wordMatch) return Math.min(5, Number(wordMatch[1]));
+      // If there's a small number (1-5) present, treat it as stars; ignore larger numbers (likely fines)
+      const numMatch = raw.replace(/[$,]/g, '').match(/\d+/);
+      if (numMatch) {
+        const n = Number(numMatch[0]);
+        if (n > 0 && n <= 5) return n;
+      }
       return 0;
     }
 
